@@ -45,10 +45,16 @@ $(document).ready(function() {
                 $('#usd').html(data.BTC.USD)
                 $('#usd').css('color','red')
                 $('#difusd').css('color','red')
-               
+                $('#difeur').html("- "+ ($('#eur').html()).toFixed(2)-data.BTC.EUR)
+                $('#eur').html(data.BTC.EUR)
+                $('#eur').css('color','red')
+                $('#difeur').css('color','red')
                }
-               if(data.BTC.EUR < $('#eur').html()){
-                
+               if(data.BTC.USD < $('#usd').html()){
+                $('#difusd').html("- "+ ($('#usd').html()-data.BTC.USD).toFixed(2))
+                $('#usd').html(data.BTC.USD)
+                $('#usd').css('color','red')
+                $('#difusd').css('color','red')
                 $('#difeur').html("- "+ ($('#eur').html()).toFixed(2)-data.BTC.EUR)
                 $('#eur').html(data.BTC.EUR)
                 $('#eur').css('color','red')

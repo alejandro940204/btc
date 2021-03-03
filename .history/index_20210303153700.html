@@ -31,7 +31,10 @@ $(document).ready(function() {
                 $('#usd').html(data.BTC.USD )
                 $('#difusd').css('color','green')
                 $('#usd').css('color','green')
-                
+                $('#difeur').html("+ "+ (data.BTC.EUR-$('#eur').html()).toFixed(2))
+                $('#eur').html(data.BTC.EUR)
+                $('#eur').css('color','green')
+                $('#difeur').css('color','green')
                }
                if(data.BTC.EUR >= $('#eur').html()){
                
@@ -45,10 +48,6 @@ $(document).ready(function() {
                 $('#usd').html(data.BTC.USD)
                 $('#usd').css('color','red')
                 $('#difusd').css('color','red')
-               
-               }
-               if(data.BTC.EUR < $('#eur').html()){
-                
                 $('#difeur').html("- "+ ($('#eur').html()).toFixed(2)-data.BTC.EUR)
                 $('#eur').html(data.BTC.EUR)
                 $('#eur').css('color','red')
